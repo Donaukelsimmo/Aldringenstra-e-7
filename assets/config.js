@@ -1,7 +1,7 @@
 /*
  * Zentrale Einstellungen der Website.
  * Alle Werte, die sich ändern können (Miete, Bezugstermin, Formular-Empfänger),
- * werden nur hier gepflegt.
+ * werden nur hier gepflegt. Quelle: Exposé OM-464970 (ohne-makler.net).
  */
 window.SITE_CONFIG = {
   // Inserat auf ohne-makler.net
@@ -16,25 +16,29 @@ window.SITE_CONFIG = {
   // Leer lassen (""), wenn Anfragen nur per E-Mail-Programm (mailto) verschickt werden sollen.
   formEndpoint: "https://formsubmit.co/ajax/vermietung@donaukels-immo.de",
 
-  // Mietkonditionen. null = Feld wird nicht angezeigt, stattdessen Verweis auf das Inserat.
-  // Werte in Euro pro Monat, ohne Tausenderpunkt (z. B. 1400).
+  // Mietkonditionen in Euro pro Monat. Die Gesamtmiete wird automatisch summiert.
   miete: {
-    kaltmiete: null,
-    stellplatz: null,
-    nebenkosten: null, // Vorauszahlung Betriebs- und Heizkosten
-    kaution: null,
-    hinweis: "" // z. B. "Indexmietvertrag"
+    positionen: [
+      ["Kaltmiete Wohnung", 1400],
+      ["Einbauküche", 80],
+      ["Tiefgaragenstellplatz inkl. Wallbox", 120],
+      ["Kellerabteil", 50],
+      ["Nebenkosten (Vorauszahlung)", 115],
+      ["Heizkosten (Vorauszahlung)", 70]
+    ],
+    kaution: 4200,
+    hinweis: ""
   },
 
   // Bezugstermin (Freitext)
-  bezugAb: "voraussichtlich 01.12.2026",
+  bezugAb: "01.11.2026",
 
-  // Energieausweis-Pflichtangaben (§ 87 GEG). null = Verweis auf Inserat/Besichtigung.
+  // Energieausweis-Pflichtangaben (§ 87 GEG)
   energie: {
-    art: null, // "Bedarfsausweis" oder "Verbrauchsausweis"
-    kennwert: null, // z. B. "15 kWh/(m²·a)"
-    klasse: null, // z. B. "A+"
-    traeger: "Strom (Luft-Wasser-Wärmepumpe, PV-Anlage mit Speicher)",
-    baujahr: "2026"
+    art: "Bedarfsausweis",
+    kennwert: "6,1 kWh/(m²·a)",
+    klasse: "A+",
+    traeger: "Luft-/Wasser-Wärmepumpe",
+    baujahr: "2024"
   }
 };

@@ -19,10 +19,7 @@
   var priceRows = document.getElementById("price-rows");
   if (priceRows && C.miete) {
     var m = C.miete;
-    var rows = [];
-    if (m.kaltmiete != null) rows.push(["Kaltmiete Wohnung", m.kaltmiete]);
-    if (m.stellplatz != null) rows.push(["Tiefgaragenstellplatz mit Wallbox", m.stellplatz]);
-    if (m.nebenkosten != null) rows.push(["Vorauszahlung Betriebs- und Heizkosten", m.nebenkosten]);
+    var rows = (m.positionen || []).filter(function (r) { return r[1] != null; });
     if (rows.length) {
       var html = rows.map(function (r) {
         return '<div class="price-row"><span>' + r[0] + "</span><span>" + fmtEuro(r[1]) + "</span></div>";
@@ -51,6 +48,45 @@
     var txt = parts.join(" · ");
     if (!e.art || !e.kennwert) txt += " · Kennwerte des Energieausweises siehe Inserat bzw. Vorlage bei der Besichtigung.";
     en.textContent = txt;
+  }
+
+  // Warmmiete in Texten
+  if (C.miete && C.miete.positionen) {
+    var warm = C.miete.positionen.reduce(function (s, r) { return s + (r[1] || 0); }, 0);
+    document.querySelectorAll("[data-warmmiete]").forEach(function (el) {
+      el.textContent = new Intl.NumberFormat("de-DE", { maximumFractionDigits: 0 }).format(warm) + " €";
+    });
+  }
+
+  // Galerie mit Großansicht
+  var lb = document.getElementById("lightbox");
+  var thumbs = Array.prototype.slice.call(document.querySelectorAll(".gallery a"));
+  if (lb && thumbs.length) {
+    var lbImg = lb.querySelector("img");
+    var lbCap = lb.querySelector("figcaption");
+    var idx = 0;
+    function show(i) {
+      idx = (i + thumbs.length) % thumbs.length;
+      var a = thumbs[idx];
+      lbImg.src = a.getAttribute("href");
+      lbImg.alt = a.querySelector("img").alt;
+      lbCap.textContent = a.getAttribute("data-caption") || "";
+    }
+    function open(i) { show(i); lb.hidden = false; document.body.style.overflow = "hidden"; lb.querySelector(".lb-close").focus(); }
+    function close() { lb.hidden = true; document.body.style.overflow = ""; thumbs[idx].focus(); }
+    thumbs.forEach(function (a, i) {
+      a.addEventListener("click", function (ev) { ev.preventDefault(); open(i); });
+    });
+    lb.querySelector(".lb-close").addEventListener("click", close);
+    lb.querySelector(".lb-prev").addEventListener("click", function () { show(idx - 1); });
+    lb.querySelector(".lb-next").addEventListener("click", function () { show(idx + 1); });
+    lb.addEventListener("click", function (ev) { if (ev.target === lb) close(); });
+    document.addEventListener("keydown", function (ev) {
+      if (lb.hidden) return;
+      if (ev.key === "Escape") close();
+      if (ev.key === "ArrowLeft") show(idx - 1);
+      if (ev.key === "ArrowRight") show(idx + 1);
+    });
   }
 
   // Mobile CTA
