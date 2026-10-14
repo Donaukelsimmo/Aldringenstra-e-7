@@ -14,7 +14,7 @@ window.SITE_CONFIG = {
   // Formular-Dienst (FormSubmit). Beim ersten Absenden kommt eine Aktivierungs-Mail
   // an die obige Adresse, die einmal bestätigt werden muss.
   // Leer lassen (""), wenn Anfragen nur per E-Mail-Programm (mailto) verschickt werden sollen.
-  formEndpoint: "https://formsubmit.co/ajax/vermietung@donaukels-immo.de",
+  formEndpoint: "",
 
   // Mietkonditionen in Euro pro Monat. Die Gesamtmiete wird automatisch summiert.
   miete: {
