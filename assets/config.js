@@ -39,6 +39,6 @@ window.SITE_CONFIG = {
     kennwert: "6,1 kWh/(m²·a)",
     klasse: "A+",
     traeger: "Luft-/Wasser-Wärmepumpe",
-    baujahr: "2024"
+    baujahr: "2026"
   }
 };

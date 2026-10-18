@@ -246,6 +246,19 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--a
 .cta-band .actions { display: flex; flex-wrap: wrap; gap: 12px; }
 
 
+/* Video */
+.section-dark { background: var(--ink); color: #fff; }
+.section-dark h2 { color: #fff; }
+.section-dark p { color: #c9d0d3; }
+.section-dark .eyebrow { color: var(--sand); }
+.section-dark .small-print { color: #9aa4a8; }
+.btn-on-dark { color: #fff; border-color: #fff; }
+.btn-on-dark:hover { background: #fff; color: var(--ink); }
+.video-frame { width: 100%; max-width: 960px; }
+.video-frame video { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; border-radius: 18px; background: #000; box-shadow: 0 12px 40px rgba(0, 0, 0, .35); }
+.video-meta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-top: 20px; max-width: 960px; }
+.video-meta .small-print { margin: 0; }
+
 /* Galerie */
 .gallery { display: grid; gap: 10px; grid-template-columns: repeat(2, 1fr); }
 @media (min-width: 760px) { .gallery { grid-template-columns: repeat(4, 1fr); } }

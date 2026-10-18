@@ -10,14 +10,14 @@ Statische Website zur Vermietung der Neubauwohnung Aldringenstraße 7, Whg. 08, 
 
 ## Pflege
 Alle veränderlichen Werte stehen in `assets/config.js`:
-- `miete` – Kaltmiete, Stellplatz, Nebenkosten, Kaution. Solange `null`, verweist die Seite auf das Inserat.
+- `miete` – Mietpositionen (Kaltmiete, Küche, Stellplatz, Keller, Nebenkosten, Heizkosten) und Kaution. Die Warmmiete wird automatisch summiert.
 - `energie` – Pflichtangaben aus dem Energieausweis (§ 87 GEG).
 - `bezugAb` – Bezugstermin.
 - `formEndpoint` – Formular-Dienst. Standard: FormSubmit an vermietung@donaukels-immo.de.
   Beim ersten Absenden kommt eine Aktivierungs-Mail, die einmal bestätigt werden muss.
   Leerer Wert = Formulare öffnen das E-Mail-Programm (mailto).
 
-Fotos liegen in `images/`.
+Fotos liegen in `images/`, das Rundgang-Video in `video/`.
 
 ## Veröffentlichung (GitHub Pages)
 Repository → Settings → Pages → Branch auswählen, Ordner `/ (root)`.
