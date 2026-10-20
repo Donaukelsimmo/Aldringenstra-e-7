@@ -1,12 +1,12 @@
 /*
  * Zentrale Einstellungen der Website.
  * Alle Werte, die sich ändern können (Miete, Bezugstermin, Formular-Empfänger),
- * werden nur hier gepflegt. Quelle: Exposé OM-464970 (ohne-makler.net).
+ * werden nur hier gepflegt. Quelle: Exposé OM-506739 (ohne-makler.net).
  */
 window.SITE_CONFIG = {
   // Inserat auf ohne-makler.net
-  inseratUrl: "https://www.ohne-makler.net/immobilie/464970/",
-  inseratId: "OM-464970",
+  inseratUrl: "https://www.ohne-makler.net/immobilie/506739/",
+  inseratId: "OM-506739",
 
   // Empfänger der Anfragen und Selbstauskünfte
   email: "vermietung@donaukels-immo.de",
