@@ -1,7 +1,7 @@
 
 # Aldringenstraße 7 – Vermietungs-Website
 
-Statische Website zur Vermietung der Neubauwohnung Aldringenstraße 7, Whg. 08, 85051 Ingolstadt.
+Statische Website zur Vermietung der Neubauwohnung Aldringenstraße 7, 85051 Ingolstadt.
 
 ## Seiten
 - `index.html` – Wohnungsvorstellung, Kurzanfrage, Link auf das Inserat OM-506739 (ohne-makler.net)
