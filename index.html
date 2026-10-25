@@ -85,7 +85,6 @@
         <p class="small-print">Ca. 2 Minuten · ohne Ton</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#kontakt">Besichtigung anfragen</a>
-          <a class="btn btn-outline btn-on-dark" href="selbstauskunft.html">Selbstauskunft ausfüllen</a>
         </div>
       </div>
     </div>
@@ -322,13 +321,13 @@
       <div class="section-head">
         <span class="eyebrow">So geht es weiter</span>
         <h2>In vier Schritten zur Wohnung</h2>
-        <p>Die Nachfrage ist hoch. Damit jede Anfrage fair und zügig bearbeitet wird, gilt folgender Ablauf.</p>
+        <p>Ohne Umwege zur Besichtigung: Sie fragen an, ich lade Sie zu einem Termin ein.</p>
       </div>
       <ol class="steps">
-        <li><h3>Anfrage senden</h3><p>Kurz über das Formular unten oder über das Inserat auf ohne-makler.net.</p></li>
-        <li><h3>Selbstauskunft</h3><p>Direkt hier auf der Website ausfüllen oder nach Ihrer Anfrage per E-Mail erhalten. Nachweise sind in diesem Schritt noch nicht nötig.</p></li>
-        <li><h3>Besichtigung</h3><p>Nach Prüfung der Selbstauskunft melde ich mich zur Terminabstimmung.</p></li>
-        <li><h3>Mietvertrag</h3><p>Bei Zusage erhalten Sie den Mietvertrag. Unterlagen bringen Sie zur Besichtigung mit.</p></li>
+        <li><h3>Anfrage senden</h3><p>Über das Formular unten oder über das Inserat auf ohne-makler.net. Ein paar Sätze zu Ihnen helfen mir bei der Terminplanung.</p></li>
+        <li><h3>Besichtigung</h3><p>Sie erhalten von mir eine Einladung zu einem Besichtigungstermin.</p></li>
+        <li><h3>Selbstauskunft</h3><p>Gefällt Ihnen die Wohnung, füllen Sie die Selbstauskunft aus, direkt online oder als Formular per E-Mail.</p></li>
+        <li><h3>Mietvertrag</h3><p>Nach positiver Prüfung erhalten Sie den Mietvertrag. Vor Unterzeichnung benötige ich eine aktuelle SCHUFA-Auskunft und Einkommensnachweise.</p></li>
       </ol>
       <div class="notice">
         <strong>Bitte beachten:</strong> Einbauküche, Kellerabteil und Tiefgaragenstellplatz mit Wallbox gehören zur Wohnung und werden nur zusammen vermietet. Die Wohnung wird als Hauptwohnsitz vermietet. Haustierhaltung ist nicht erwünscht.
@@ -341,16 +340,16 @@
     <div class="container contact-grid">
       <div>
         <span class="eyebrow">Kontakt</span>
-        <h2>Interesse? Melden Sie sich jetzt.</h2>
-        <p>Schreiben Sie mir kurz, wer einziehen möchte und ab wann. Sie können auch direkt die Selbstauskunft ausfüllen. Das beschleunigt die Vergabe eines Besichtigungstermins.</p>
-        <p><a class="btn btn-primary" href="selbstauskunft.html">Selbstauskunft direkt ausfüllen</a></p>
+        <h2>Interesse? Jetzt Besichtigung anfragen.</h2>
+        <p>Schreiben Sie mir kurz, wer einziehen möchte und ab wann. Sie erhalten dann eine Einladung zur Besichtigung.</p>
+        <p class="small-print">Sie möchten mir schon vorab mehr über sich mitteilen? Die <a href="selbstauskunft.html">Selbstauskunft</a> können Sie freiwillig bereits jetzt ausfüllen. Voraussetzung für die Besichtigung ist sie nicht.</p>
         <p class="small-print">Oder per E-Mail: <a data-email href="mailto:vermietung@donaukels-immo.de">vermietung@donaukels-immo.de</a><br>
         Inserat: <a data-inserat href="https://www.ohne-makler.net/immobilie/506739/" target="_blank" rel="noopener">ohne-makler.net, <span data-inserat-id>OM-506739</span></a></p>
       </div>
 
       <form class="form-card" data-send data-subject="Anfrage Aldringenstraße 7"
-            data-success="Vielen Dank für Ihre Anfrage. Nächster Schritt: Bitte füllen Sie die <a href='selbstauskunft.html'>Selbstauskunft</a> aus, dann melde ich mich zur Abstimmung eines Besichtigungstermins.">
-        <h3>Kurzanfrage</h3>
+            data-success="Vielen Dank für Ihre Anfrage. Ich melde mich in Kürze mit einer Einladung zur Besichtigung.">
+        <h3>Besichtigung anfragen</h3>
         <div class="form-grid two">
           <div class="field"><label for="k-name">Name <span class="req">*</span></label><input id="k-name" name="Name" type="text" autocomplete="name" required></div>
           <div class="field"><label for="k-mail">E-Mail <span class="req">*</span></label><input id="k-mail" name="E-Mail" type="email" autocomplete="email" required></div>
@@ -377,7 +376,8 @@
               <option>Sonstiges</option>
             </select>
           </div>
-          <div class="field full"><label for="k-msg">Nachricht</label><textarea id="k-msg" name="Nachricht" placeholder="Kurz zu Ihnen: Wer zieht ein, warum suchen Sie, Fragen zur Wohnung …"></textarea></div>
+          <div class="field full"><label for="k-termin">Wann passt Ihnen eine Besichtigung?</label><input id="k-termin" name="Wunschzeit Besichtigung" type="text" placeholder="z. B. werktags ab 17 Uhr, Samstag vormittags"></div>
+          <div class="field full"><label for="k-msg">Nachricht</label><textarea id="k-msg" name="Nachricht" placeholder="Kurz zu Ihnen: Wer zieht ein, beruflicher Hintergrund, Grund für den Umzug …"></textarea></div>
           <div class="field full">
             <label class="choice"><input type="checkbox" name="Datenschutz" value="akzeptiert" required>
               <span>Ich bin einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage verarbeitet werden. Hinweise in der <a href="datenschutz.html">Datenschutzerklärung</a>. <span class="req">*</span></span></label>
@@ -403,8 +403,8 @@
         <details><summary>Kann ich den Stellplatz, die Küche oder den Keller weglassen?</summary><p>Nein. Einbauküche, Kellerabteil und Tiefgaragenstellplatz mit Wallbox gehören zur Wohnung und werden nur gemeinsam vermietet.</p></details>
         <details><summary>Sind Haustiere erlaubt?</summary><p>Eine Haustierhaltung ist nicht erwünscht.</p></details>
         <details><summary>Ab wann ist die Wohnung frei?</summary><p>Die Übernahme ist ab dem <span data-bezug>01.11.2026</span> möglich. Ein späterer Einzug ist nach Absprache möglich.</p></details>
-        <details><summary>Wann kann ich besichtigen?</summary><p>Besichtigungstermine vergebe ich nach Eingang und Prüfung der ausgefüllten Selbstauskunft. Ich melde mich dann bei Ihnen.</p></details>
-        <details><summary>Welche Unterlagen brauche ich?</summary><p>Zuerst nur die ausgefüllte Selbstauskunft. Sie können sie direkt auf dieser Website ausfüllen oder erhalten sie nach Ihrer Anfrage per E-Mail. Zur Besichtigung bitte mitbringen: die letzten drei Gehaltsabrechnungen (bei Selbstständigen letzter Steuerbescheid und aktuelle BWA), eine aktuelle SCHUFA-Auskunft (nicht älter als 4 Wochen), eine Mietschuldenfreiheitsbescheinigung und bei befristeter Beschäftigung oder Probezeit den Arbeitsvertrag.</p></details>
+        <details><summary>Wann kann ich besichtigen?</summary><p>Nach Ihrer Anfrage erhalten Sie eine Einladung zu einem Besichtigungstermin. Eine Selbstauskunft ist dafür nicht erforderlich.</p></details>
+        <details><summary>Welche Unterlagen brauche ich?</summary><p>Für die Besichtigung keine. Gefällt Ihnen die Wohnung, füllen Sie die Selbstauskunft aus. Kommt ein Mietvertrag zustande, benötige ich vor Unterzeichnung eine aktuelle SCHUFA-Auskunft (nicht älter als 4 Wochen) und die letzten drei Gehaltsabrechnungen (bei Selbstständigen letzter Steuerbescheid und aktuelle BWA), bei befristeter Beschäftigung oder Probezeit zusätzlich den Arbeitsvertrag.</p></details>
       </div>
     </div>
   </section>
@@ -414,10 +414,10 @@
       <div class="cta-band">
         <div>
           <h2>Sichern Sie sich Ihren Besichtigungstermin</h2>
-          <p>Mit ausgefüllter Selbstauskunft kommen Sie direkt in die engere Auswahl.</p>
+          <p>Anfrage senden, Einladung erhalten, Wohnung ansehen.</p>
         </div>
         <div class="actions">
-          <a class="btn btn-primary" href="selbstauskunft.html">Selbstauskunft ausfüllen</a>
+          <a class="btn btn-primary" href="#kontakt">Besichtigung anfragen</a>
           <a class="btn btn-outline" data-inserat href="https://www.ohne-makler.net/immobilie/506739/" target="_blank" rel="noopener">Inserat ansehen</a>
         </div>
       </div>
@@ -441,8 +441,8 @@
 </div>
 
 <div class="mobile-cta">
-  <a class="btn btn-primary" href="#kontakt">Anfragen</a>
-  <a class="btn btn-outline" href="selbstauskunft.html">Selbstauskunft</a>
+  <a class="btn btn-primary" href="#kontakt">Besichtigung anfragen</a>
+  <a class="btn btn-outline" href="#video">Video ansehen</a>
 </div>
 
 <script src="assets/config.js"></script>
