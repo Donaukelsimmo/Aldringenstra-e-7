@@ -31,7 +31,7 @@ window.SITE_CONFIG = {
   },
 
   // Bezugstermin (Freitext)
-  bezugAb: "01.11.2026",
+  bezugAb: "01.12.2026",
 
   // Energieausweis-Pflichtangaben (§ 87 GEG)
   energie: {
