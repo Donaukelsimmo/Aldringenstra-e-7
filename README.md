@@ -10,7 +10,7 @@ Statische Website zur Vermietung der Neubauwohnung Aldringenstraße 7, 85051 Ing
 
 ## Pflege
 Alle veränderlichen Werte stehen in `assets/config.js`:
-- `miete` – Mietpositionen (Kaltmiete, Küche, Stellplatz, Keller, Nebenkosten, Heizkosten) und Kaution. Die Warmmiete wird automatisch summiert.
+- `miete` – Mietpositionen (Kaltmiete, Stellplatz, Küche, Nebenkosten inkl. Heizkosten) und Kaution. Die Warmmiete wird automatisch summiert.
 - `energie` – Pflichtangaben aus dem Energieausweis (§ 87 GEG).
 - `bezugAb` – Bezugstermin.
 - `formEndpoint` – Formular-Dienst. Standard: FormSubmit an vermietung@donaukels-immo.de.

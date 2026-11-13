@@ -19,19 +19,17 @@ window.SITE_CONFIG = {
   // Mietkonditionen in Euro pro Monat. Die Gesamtmiete wird automatisch summiert.
   miete: {
     positionen: [
-      ["Kaltmiete Wohnung", 1400],
-      ["Einbauküche", 80],
-      ["Tiefgaragenstellplatz inkl. Wallbox", 120],
-      ["Kellerabteil", 50],
-      ["Nebenkosten (Vorauszahlung)", 115],
-      ["Heizkosten (Vorauszahlung)", 70]
+      ["Kaltmiete Wohnung", 1250],
+      ["Tiefgaragenstellplatz inkl. Wallbox", 100],
+      ["Einbauküche", 50],
+      ["Nebenkosten inkl. Heizkosten (Vorauszahlung)", 185]
     ],
-    kaution: 4200,
+    kaution: 3750,
     hinweis: ""
   },
 
   // Bezugstermin (Freitext)
-  bezugAb: "01.12.2026",
+  bezugAb: "01.12.2026, nach Vereinbarung",
 
   // Energieausweis-Pflichtangaben (§ 87 GEG)
   energie: {
