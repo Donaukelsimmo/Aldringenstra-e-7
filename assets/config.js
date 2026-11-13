@@ -24,7 +24,7 @@ window.SITE_CONFIG = {
       ["Einbauküche", 50],
       ["Nebenkosten inkl. Heizkosten (Vorauszahlung)", 185]
     ],
-    kaution: 4200,
+    kaution: 3750,
     hinweis: ""
   },
 
